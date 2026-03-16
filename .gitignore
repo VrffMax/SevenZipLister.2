@@ -1,2 +1,41 @@
-bin/*
-obj/*
+# Build results (built files and folders)
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.useroptions
+*.DotSettings.user
+
+# Rider / JetBrains Rider
+.idea/
+
+# .NET Core, Unity Mono and other Mono specific files
+*.csx
+*.runsettings
+*.*.runtimeconfig.json
+*.pdb
+*.xml
+
+# NuGet Packages (optional - comment out if you want to track dependencies)
+packages/
+*.nupkg
+
+# Test Results
+TestResults/
+coverage/
+*.coveragexml
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+tmp/
+temp/
+~*
+.DS_Store
