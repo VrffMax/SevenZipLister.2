@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TBXcr+WMkU8=",
+  "success": true,
+  "projectFilePath": "C:\\Playground\\LibRuWorkspace\\SevenZipLister.2\\src\\SevenZipLister.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vrffm\\.nuget\\packages\\sharpcompress\\0.39.0\\sharpcompress.0.39.0.nupkg.sha512",
+    "C:\\Users\\vrffm\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
+    "C:\\Users\\vrffm\\.nuget\\packages\\zstdsharp.port\\0.8.4\\zstdsharp.port.0.8.4.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SevenZipLister/1.0.0": {
+        "dependencies": {
+          "SharpCompress": "0.39.0"
+        },
+        "runtime": {
+          "SevenZipLister.dll": {}
+        }
+      },
+      "SharpCompress/0.39.0": {
+        "dependencies": {
+          "ZstdSharp.Port": "0.8.4"
+        },
+        "runtime": {
+          "lib/net8.0/SharpCompress.dll": {
+            "assemblyVersion": "0.39.0.0",
+            "fileVersion": "0.39.0.0"
+          }
+        }
+      },
+      "ZstdSharp.Port/0.8.4": {
+        "runtime": {
+          "lib/net8.0/ZstdSharp.dll": {
+            "assemblyVersion": "0.8.4.0",
+            "fileVersion": "0.8.4.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SevenZipLister/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpCompress/0.39.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0esqIUDlg68Z7+Weuge4QzEvNtawUO4obTJFL7xuf4DBHMxVRr+wbNgiX9arMrj3kGXQSvLe0zbZG3oxpkwJOA==",
+      "path": "sharpcompress/0.39.0",
+      "hashPath": "sharpcompress.0.39.0.nupkg.sha512"
+    },
+    "ZstdSharp.Port/0.8.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eieSXq3kakCUXbgdxkKaRqWS6hF0KBJcqok9LlDCs60GOyrynLvPOcQ0pRw7shdPF7lh/VepJ9cP9n9HHc759g==",
+      "path": "zstdsharp.port/0.8.4",
+      "hashPath": "zstdsharp.port.0.8.4.nupkg.sha512"
+    }
+  }
+}
