@@ -84,7 +84,6 @@ namespace SevenZipLister
             }
 
             // Approach 2: Use reflection to try all available properties that might contain size info
-            long result = 1; // Default fallback value
             try
             {
                 var properties = entry.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
