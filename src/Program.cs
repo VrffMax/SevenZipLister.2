@@ -64,8 +64,8 @@ namespace SevenZipLister
 
                     entries.Add(new ArchiveEntry
                     {
-                        FullName = entry.Key,
-                        FileName = Path.GetFileName(entry.Key),
+                        FullName = entry.Key ?? string.Empty,
+                        FileName = Path.GetFileName(entry.Key) ?? string.Empty,
                         SizeInBytes = fileSize > 0 ? fileSize : 1
                     });
                 }
@@ -84,6 +84,7 @@ namespace SevenZipLister
             }
 
             // Approach 2: Use reflection to try all available properties that might contain size info
+            long result = 1; // Default fallback value
             try
             {
                 var properties = entry.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
@@ -101,19 +102,19 @@ namespace SevenZipLister
                             var value = prop.GetValue(entry);
                             if (value != null)
                             {
-                                long result;
-                                if (value is long longValue)
-                                    result = longValue;
-                                else if (value is int intValue)
-                                    result = intValue;
+                                long resultValue;
+                                if (value is long longVal)
+                                    resultValue = longVal;
+                                else if (value is int intVal)
+                                    resultValue = intVal;
                                 else if (value is byte[] bytes)
-                                    result = bytes.Length;
+                                    resultValue = bytes.Length;
                                 else
                                     continue;
 
-                                if (result > 0 && result < 10000000000) // Reasonable size check (< 10GB)
+                                if (resultValue > 0 && resultValue < 10000000000) // Reasonable size check (< 10GB)
                                 {
-                                    return result;
+                                    return resultValue;
                                 }
                             }
                         }
@@ -134,17 +135,17 @@ namespace SevenZipLister
                     var value = prop.GetValue(entry);
                     if (value != null)
                     {
-                        long result;
-                        if (value is long longValue)
-                            result = longValue;
-                        else if (value is int intValue)
-                            result = intValue;
+                        long resultValue;
+                        if (value is long longVal)
+                            resultValue = longVal;
+                        else if (value is int intVal)
+                            resultValue = intVal;
                         else
                             continue;
 
-                        if (result >= 0 && result < 10000000000)
+                        if (resultValue >= 0 && resultValue < 10000000000)
                         {
-                            return result > 0 ? result : 1;
+                            return resultValue > 0 ? resultValue : 1;
                         }
                     }
                 }
