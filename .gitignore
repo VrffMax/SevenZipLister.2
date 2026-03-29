@@ -1,41 +1,76 @@
-# Build results (built files and folders)
+```# Build results (built files and folders)
 bin/
 obj/
-
-# Visual Studio
-.vs/
-*.user
-*.suo
-*.useroptions
-*.DotSettings.user
-
-# Rider / JetBrains Rider
-.idea/
-
-# .NET Core, Unity Mono and other Mono specific files
-*.csx
-*.runsettings
-*.*.runtimeconfig.json
+publish/
+*.dll
+*.exe
 *.pdb
-*.xml
+*.dll.config
+*.exe.config
 
-# NuGet Packages (optional - comment out if you want to track dependencies)
-packages/
-*.nupkg
+# Visual Studio / .NET 8 IDE files
+.vs/
+*.suo
+*.user
+.userprefs
+.userosscache
+*.sln.docstates
+*.slnx
+*ProjectEvaluation.*
 
-# Test Results
-TestResults/
-coverage/
-*.coveragexml
-
-# OS generated files
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# Temporary files
+# Temporary files and directories
 tmp/
 temp/
-~*
+Temp/
+*.tmp
+*.temp
+
+# Debug symbols and intermediate files
+*.mdb
+*.tlb
+
+# Log files
+*.log
+logs/
+LogFiles/
+
+# Environment variables and secrets
+.env
+*.env.local
+!.env.example
+.env.production
+
+# Test results
+TestResults/
+*.trx
+coverage/
+
+# NuGet related
+packages/
+*.nuget.props
+*.nuget.targets
+
+# OS specific files (macOS, Windows)
 .DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+
+# Output directories for generated code
+Generated/
+generated/
+
+# Roslyn analyzer output
+*.globalconfig.cache
+
+# IDE-specific cache and settings
+.vscode/**
+.idea/
+*.iml
+*.iws
+*.ipr
+*.DotSettings.user
+
+# Optional: Uncomment to exclude solution files from git
+# *.sln
